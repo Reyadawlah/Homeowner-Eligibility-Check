@@ -4,6 +4,7 @@ import './App.css';
 import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Homepage from "./components/home"
 import {
 	BrowserRouter as Router,
 	Routes,
@@ -13,6 +14,7 @@ import {
 import SignUp from "./pages/signup";
 import Login from "./pages/login";
 import Form from "./pages/form";
+import Dash from "./pages/dashboard"
 
 
 function App() {
@@ -20,6 +22,10 @@ function App() {
 		<Router>
 			<Navbar />
 			<Routes>
+        <Route
+					path="/"
+					element={<Homepage />}
+				/>
         <Route
 					path="/pages/login"
 					element={<Login />}
@@ -31,6 +37,10 @@ function App() {
         <Route
 					path="/pages/form"
 					element={<Form />}
+				/>
+        <Route
+					path="/pages/dashboard"
+					element={<Dash />}
 				/>
 			</Routes>
 		</Router>
